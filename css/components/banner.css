@@ -55,13 +55,17 @@
   height: 300%;
   position: absolute;
   opacity: .5;
-}
-.banner .btn-banner:hover .trix {
-  -webkit-animation: .7s linear 0s   move_eye;
-  animation: .7s linear 0s   move_eye;
+  -webkit-animation: .7s linear unmove_cta;
+  animation: .7s linear unmove_cta;
 }
 
-@-webkit-keyframes move_eye {
+.banner .btn-banner:hover .trix {
+  -webkit-animation: .7s linear move_cta;
+  animation: .7s linear move_cta;
+}
+
+
+@-webkit-keyframes move_cta {
   from {
     left: -150px;
   }
@@ -69,11 +73,28 @@
     left: 200px;
   }
 }
-@keyframes move_eye {
+@keyframes move_cta {
   from {
     left: -150px;
   }
   to {
     left: 200px;
+  }
+}
+
+@-webkit-keyframes unmove_cta {
+  from {
+    left: 200px;
+  }
+  to {
+    left: -150px;
+  }
+}
+@keyframes unmove_cta {
+  from {
+    left: 200px;
+  }
+  to {
+    left: -150px;
   }
 }
